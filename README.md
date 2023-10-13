@@ -24,7 +24,7 @@ export function Observer({ children, onContentEndVisible }: Props) {
       root: null,
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new  ((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
           onContentEndVisible();
